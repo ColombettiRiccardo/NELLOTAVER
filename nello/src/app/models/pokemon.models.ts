@@ -1,4 +1,8 @@
-  
+  export interface Tcg_data{
+    data : Pokemon
+  }
+
+
   export interface Pokemon {
     id: string
     name: string
