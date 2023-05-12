@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VenasaurComponent } from './venasaur.component';
+import { GenericComponent } from './generic.component';
 
-describe('VenasaurComponent', () => {
-  let component: VenasaurComponent;
-  let fixture: ComponentFixture<VenasaurComponent>;
+describe('GenericComponent', () => {
+  let component: GenericComponent;
+  let fixture: ComponentFixture<GenericComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VenasaurComponent ]
+      declarations: [ GenericComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(VenasaurComponent);
+    fixture = TestBed.createComponent(GenericComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

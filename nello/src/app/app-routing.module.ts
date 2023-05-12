@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BlastoiseComponent } from './blastoise/blastoise.component';
-import { VenasaurComponent } from './venasaur/venasaur.component';
-import { CharizardComponent } from './charizard/charizard.component';
+
+
+import { GenericComponent } from './generic/generic.component';
 
 const routes: Routes = [
-  {path: "charizard", component: CharizardComponent},
-  {path: "venasaur" , component: VenasaurComponent},
-  {path: "blastoise" , component: BlastoiseComponent}
+  { path: 'generic/:id', component: GenericComponent },
+  { path:'', redirectTo:'/generic/CHARIZARD',pathMatch:'full' }
 ];
 
 @NgModule({
