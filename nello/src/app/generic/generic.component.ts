@@ -24,47 +24,20 @@ export class GenericComponent{
   {
     let uri_param = params.get('id'); //Ottengo l'id dalla ParamMap
   
+    this.http.get('https://api.pokemontcg.io/v2/cards/'+ uri_param).subscribe(a=>{
+      console.log(a);
+      //@ts-ignore
+      this.name = a.data.name
+      //@ts-ignore
+      this.card = a.data.images.small
+      //@ts-ignore
+      this.artist = a.data.artist
 
+        
+      })
 
-    switch (uri_param) {
-      case "CHARIZARD":
-        this.http.get('https://api.pokemontcg.io/v2/cards/gym2-2').subscribe(a=>{
-        console.log(a);
-        //@ts-ignore
-        this.name = a.data.name
-        //@ts-ignore
-        this.card = a.data.images.small
-        //@ts-ignore
-        this.artist = a.data.artist
-
-          
-        })
-        break;
-        case "BLASTOISE":
-          this.http.get('https://api.pokemontcg.io/v2/cards/base1-2').subscribe(a=>{
-          console.log(a);
-          //@ts-ignore
-          this.name = a.data.name
-          //@ts-ignore
-          this.card = a.data.images.small
-          //@ts-ignore
-          this.artist = a.data.artist
-
-        })
-        break;
-        case "VENASAUR":
-          this.http.get('https://api.pokemontcg.io/v2/cards/base6-18').subscribe(a=>{
-          console.log(a);
-          //@ts-ignore
-          this.name = a.data.name
-          //@ts-ignore
-          this.card = a.data.images.small
-          //@ts-ignore
-          this.artist = a.data.artist
-
-        })
-          
-        break;
+  
     }
+  
   }
-}
+
